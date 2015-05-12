@@ -1,0 +1,13 @@
+h3 {
+        color: orange;
+        text-align: left;
+    }
+
+    th {
+        color: black;
+        text-align: right;
+    }
+
+    .sperator {
+      border-top: 2px solid #000000;
+    }
