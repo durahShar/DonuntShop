@@ -94,6 +94,7 @@ function ShopManager(){
     shopList.push(shopObject);
   }
 
+
   this.totalDonutsAllShops = function(){
     var totalAllShops = 0;
     for (var i = 0; i < shopList.length; i++) {
