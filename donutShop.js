@@ -136,47 +136,59 @@ function ShopManager(){
       console.log("_________________________________");
 
 
-      reportText = reportText + "   <tbody>" + newLine;
+      reportText = reportText + "   <tbody class='shop"+ i +"'>" + newLine;
 
-      reportText = reportText + "   <tr>" + newLine;
-      reportText = reportText + "     <th colspan='2'><h3>"+shopList[i].shopName+" Donut Shop<h3></th>" + newLine;
+      reportText = reportText + "   <tr class='title'>" + newLine;
+      reportText = reportText + "     <th colspan='2' width='300'><h3>"+shopList[i].shopName+" Donut Shop<h3></th>" + newLine;
       reportText = reportText + "   </tr>" + newLine;
 
-      reportText = reportText + "     <tr>" + newLine;
-      reportText = reportText + "       <th>Average Donuts Hour:</th>" + newLine;
+      reportText = reportText + "     <tr class='even'>" + newLine;
+      reportText = reportText + "       <th>Average Donuts Hour: </th>" + newLine;
       reportText = reportText + "       <td>"+shopList[i].shopData.averageDonutsPerHour()+"</td>" + newLine;
       reportText = reportText + "     </tr>" + newLine;
 
-      reportText = reportText + "     <tr>" + newLine;
-      reportText = reportText + "       <th>Average Customers Hour:</th>" + newLine;
+      reportText = reportText + "     <tr class='odd'>" + newLine;
+      reportText = reportText + "       <th>Average Customers Hour: </th>" + newLine;
       reportText = reportText + "       <td>"+shopList[i].shopData.averageCustomersPerHour()+"</td>" + newLine;
       reportText = reportText + "     </tr>" + newLine;
 
-      reportText = reportText + "     <tr>" + newLine;
-      reportText = reportText + "       <th>Total Donuts:</th>" + newLine;
+      reportText = reportText + "     <tr class='even'>" + newLine;
+      reportText = reportText + "       <th>Total Donuts: </th>" + newLine;
       reportText = reportText + "       <td>"+shopList[i].shopData.donutsPerDay()+"</td>" + newLine;
       reportText = reportText + "     </tr>" + newLine;
 
-      reportText = reportText + "     <tr>" + newLine;
-      reportText = reportText + "       <th>Total Customers:</th>" + newLine;
+      reportText = reportText + "     <tr class='odd'>" + newLine;
+      reportText = reportText + "       <th>Total Customers: </th>" + newLine;
       reportText = reportText + "       <td>"+shopList[i].shopData.customersPerDay()+"</td>" + newLine;
       reportText = reportText + "     </tr>" + newLine;
 
       reportText = reportText + "   </tbody>" + newLine;
     };
-    reportText = reportText + "   <tfoot>" + newLine;
-    reportText = reportText + "     <tr>" + newLine;
-    reportText = reportText + "       <th class='sperator'>Total Donuts All Shops:</th>" + newLine;
-    reportText = reportText + "       <td class='sperator'>"+this.totalDonutsAllShops()+"</td>" + newLine;
+
+    reportText = reportText + "   <tfoot class='footer'>" + newLine;
+
+    reportText = reportText + "     <tr class='title'>" + newLine;
+    reportText = reportText + "       <th colspan='3' width='700'><h3 class='footerTitle'>Total of all Shops<h3></th>" + newLine;
+    //reportText = reportText + "       <td></td>" + newLine;
     reportText = reportText + "     </tr>" + newLine;
 
-    reportText = reportText + "     <tr>" + newLine;
-    reportText = reportText + "       <th>Total Customers All Shops:</th>" + newLine;
+    reportText = reportText + "     <tr class='even'>" + newLine;
+    reportText = reportText + "       <td width='700'></td>" + newLine;
+    reportText = reportText + "       <th>Total Donuts All Shops: </th>" + newLine;
+    reportText = reportText + "       <td>"+this.totalDonutsAllShops()+"</td>" + newLine;
+    reportText = reportText + "     </tr>" + newLine;
+
+    reportText = reportText + "     <tr class='odd'>" + newLine;
+    reportText = reportText + "       <td width='700'></td>" + newLine;
+    reportText = reportText + "       <th>Total Customers All Shops: </th>" + newLine;
     reportText = reportText + "       <td>"+this.totalCustomersAllShops()+"</td>" + newLine;
     reportText = reportText + "     </tr>" + newLine;
+
     reportText = reportText + "   </tfoot>" + newLine;
 
     reportText = reportText + "</table>";
+    //
+    //document.getElementById('ID_OF_YOUR_ELEMENT').innerHTML += '<tr><td>' + string + '</td></tr>'; 
 
     addDataById("report", reportText);
   }
