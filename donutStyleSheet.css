@@ -1,14 +1,91 @@
+h1 {
+  color: black;
+  text-align: left;
+  font-size: 40px;
+}
+
 h3 {
-        color: orange;
-        text-align: left;
-    }
+  color: white;
+  text-align: center;
+}
 
-    th {
-        color: black;
-        text-align: right;
-    }
+th {
+  color: black;
+  text-align: right;
+}
 
-    .sperator {
-      border-top: 2px solid #000000;
+.report {
+  background-color: #A4D997;
+}
 
-    }
+.footerTitle {
+  text-align: right;
+}
+
+.shop0 {
+  position: absolute;
+  border-radius: 25px;
+  left: 70px;
+  top: 170px;
+}
+
+.shop1 {
+  position: absolute;
+  left: 385px;
+  top: 170px;
+}
+
+.shop2 {
+  position: absolute;
+  left: 700px;
+  top: 170px;
+}
+
+.shop3 {
+  position: absolute;
+  left: 70px;
+  top: 340px;
+  width: 400;
+}
+
+.shop4 {
+  position: absolute;
+  left: 385px;
+  top: 340px;
+}
+
+.title {
+  background-color: #000000;
+}
+
+.even {
+  background-color: #cccccc;
+}
+
+.odd {
+  background-color: #eeeeee;
+}
+
+.footer {
+  //border-top: 2px solid #000000;
+  background-color: #cccccc;
+  position: absolute;
+  left: 70px;
+  top: 510px;
+}
+
+table {
+  border-collapse: collapse;
+}
+
+header {
+  background-color: #cccccc;
+}
+
+nav {
+  background-color: #cccccc;
+}
+
+article {
+ // background-color: #A4D997;
+}
