@@ -2,6 +2,7 @@ h1 {
   color: black;
   text-align: left;
   font-size: 40px;
+  font-weight: bold;
 }
 
 h3 {
@@ -78,7 +79,7 @@ table {
   border-collapse: collapse;
 }
 
-header {
+#main {
   background-color: #cccccc;
 }
 
